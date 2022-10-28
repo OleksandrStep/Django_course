@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first_app</title>
+    <link rel="stylesheet" href={% static 'style.css' %}>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Wellcome to Home page!</h1>
+<h2>Level two</h2>
+<h3>Here are your access records</h3>
+
+<div class="djangtwo">
+    {% if access_records %}
+        <table>
+
+            <thead>
+            <th>Site Name</th>
+            <th>Dare Accessed</th>
+            </thead>
+
+            {% for acc in access_records %}
+                <tr>
+                    <td>{{ acc.name }}</td>
+                    <td>{{ acc.date }}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+
+    {% else %}
+        <p>NO ACCESS RECORDS FOUND!</p>
+
+    {% endif %}
+</div>
+
+<img src={% static 'corgi.jpg' %} height="674" width="1200">
+<br>
+<a href="http://127.0.0.1:8000/info/">About</a>
+</body>
+</html>

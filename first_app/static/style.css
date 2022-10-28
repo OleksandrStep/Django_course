@@ -1,0 +1,7 @@
+h1{
+    color: #00ff88;
+    font-family: 'Lobster', cursive;
+}
+table, th, td{
+    border: 1px solid black;
+}

@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{#{% load my_templates %}#}
+{% extends "base.html" %}
+{% block content %}
+    <h1>Welcome to level four</h1>
+    <h2>{{ text|cut:'w' }}</h2>
+    <h2>{{ number|add:"5" }}</h2>
+
+{% endblock %}
